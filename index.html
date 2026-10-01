@@ -55,7 +55,7 @@ document.querySelectorAll(".symbol-item").forEach(function(el){el.addEventListen
 function isM4Plate(){return s.w===180&&s.h===200}
 function getHoleSpecs(state){
   if(state.w!==180||state.h!==200||state.holeLayout==="none")return [];
-  var spec=state.holeLayout==="concrete"?{w:10,h:25,r:5,cx:10,cy:25}:{w:10,h:10,r:5,cx:10,cy:10};
+  var spec=state.holeLayout==="concrete"?{w:10,h:25,r:5,cx:10,cy:25}:{w:10,h:15,r:5,cx:10,cy:15};
   return [{x:spec.cx,y:spec.cy,w:spec.w,h:spec.h,r:spec.r},{x:state.w-spec.cx,y:spec.cy,w:spec.w,h:spec.h,r:spec.r},{x:spec.cx,y:state.h-spec.cy,w:spec.w,h:spec.h,r:spec.r},{x:state.w-spec.cx,y:state.h-spec.cy,w:spec.w,h:spec.h,r:spec.r}];
 }
 function refreshHoleControls(){
