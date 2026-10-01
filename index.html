@@ -107,7 +107,7 @@ function renderProps(l){
   var el=document.getElementById("props");
   if(!l){el.innerHTML="Select an object to edit it.";return}
   if(l.k==="t"){
-    el.innerHTML='Text<textarea id="pt" class="field" rows="5"></textarea>Text size (pt)<input id="ps" class="field" type="number" value="'+l.size+'">Font: Helvetica Neue<br>X (mm)<input id="px" class="field" type="number" value="'+Math.round(l.x)+'">Y (mm)<input id="py" class="field" type="number" value="'+Math.round(l.y)+'">';
+    el.innerHTML='Text<textarea id="pt" class="field" rows="5"></textarea>Text size (pt)<input id="ps" class="field" type="number" value="'+l.size+'">Font: Helvetica Neue';
     var ta=document.getElementById("pt");
     ta.value=l.text;
     ta.insertAdjacentHTML("afterend",'<div class="text-colour-toggle" role="radiogroup" aria-label="Text colour"><label class="text-colour-option black"><input type="radio" name="textColour" id="pcBlack" value="#000000">Black</label><label class="text-colour-option white"><input type="radio" name="textColour" id="pcWhite" value="#FFFFFF">White</label></div>');
@@ -121,7 +121,7 @@ function renderProps(l){
       c.onchange=function(){checkpoint();l.color=this.value;draw()}
     });
   }else{
-    el.innerHTML='File: '+esc(l.name)+'<br>Width (mm)<input id="iw" class="field" type="number" value="'+Math.round(l.w)+'">Height (mm)<input id="ih" class="field" type="number" value="'+Math.round(l.h)+'">X (mm)<input id="ix" class="field" type="number" value="'+Math.round(l.x)+'">Y (mm)<input id="iy" class="field" type="number" value="'+Math.round(l.y)+'">';
+    el.innerHTML='File: '+esc(l.name)+'<br>Width (mm)<input id="iw" class="field" type="number" value="'+Math.round(l.w)+'">Height (mm)<input id="ih" class="field" type="number" value="'+Math.round(l.h)+'">';
   }
   bindNonText(l)
 }
