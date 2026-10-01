@@ -105,7 +105,7 @@ var STUDIO_SIZES=[
   {label:"A3 Landscape - 420mm x 300mm",w:420,h:300},
   {label:"A3 Portrait - 300mm x 420mm",w:300,h:420},
   {label:"A4 Portrait - 210mm x 300mm",w:210,h:300},
-  {label:"A4 Portrait - 300mm x 210mm",w:300,h:210}
+  {label:"A4 Landscape - 300mm x 210mm",w:300,h:210}
 ];
 document.getElementById("studioSizePresets").innerHTML='<div class="studio-size-buttons">'+STUDIO_SIZES.map(function(p,i){return '<button type="button" class="studio-size-button" data-size-index="'+i+'">'+esc(p.label)+'</button>'}).join("")+'</div>';
 document.querySelectorAll(".studio-size-button").forEach(function(btn){
